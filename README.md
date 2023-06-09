@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.asternox.it/">
-    <img src="https://via.placeholder.com/72" alt="Asternox Logo" width=72 height=72>
+    <img src="https://github.com/AsternoxCode/artista_design_system/blob/9d8764566972b2cb412d58c852ce795f82b59c33/LOGO-TRASPARENTE.png" alt="Asternox Logo" height=72>
   </a>
   
 <h1 align="center"><i>Design System</i> per ARTISTA</h3>
@@ -10,8 +10,6 @@
 - [Introduzione](#introduzione)
 - [Principi del design system](#principi-design)
 - [Fondamenta del design](#fondamenta-design)
-- [Contributing](#contributing)
-- [Creators](#creators)
 
 
 
@@ -30,7 +28,7 @@ Il nostro design system ha lo scopo di raggiungere diversi obiettivi chiave che 
 </ol>
 
 ## Principi del <i>design system</i>
-Blah Blah Blah
+(sezione in fase di scrittura)
 
 
 ## Fondamenta del <i>design system</i>
@@ -38,16 +36,16 @@ Blah Blah Blah
 Il nostro design system utilizza un sistema di griglia flessibile per garantire un layout coerente e ben strutturato nelle interfacce utente. In particolare, la nostra griglia è composta da <strong>12 colonne della distanza (<i>gutter</i>) di 16px l'una</strong> (la scelta di 12 colonne consente di avere una flessibilità sufficiente per adattare il layout alle diverse dimensioni dello schermo o esigenze).
 
 Di seguito è riportata una sintesi visiva del layout:
-INSERIRE IMMAGINE
+
+<img src="https://github.com/AsternoxCode/artista_design_system/blob/9d8764566972b2cb412d58c852ce795f82b59c33/layout/Layout.png" alt="Layout generale di ARTISTA">
 
 L'interfaccia si divide in due parti fondamentali: la <strong>view principale</strong> e la <strong>sidebar</strong>.
+<img src="https://github.com/AsternoxCode/artista_design_system/blob/9d8764566972b2cb412d58c852ce795f82b59c33/layout/Layout-Padding.png" alt="Layout generale di ARTISTA, compreso di padding">
+
+
+Ed hanno le seguenti caratteristiche:
 <h4>View principale</h4>
-La view principale segue il layout in questo modo:
-
-INSERIRE IMMAGINE
-
-Ed ha le seguenti caratteristiche:
-
+  
 ```bash
 W: 736px
 H: 560px
@@ -71,9 +69,22 @@ Corner radius: 12px
 Fill: Solid
 #222222
 ```
+<h4>Schede</h4>
+  
+```bash
+W: 219px
+H: 239px
+Corner radius: 6px
+Fill: Solid
+rgba(255, 255, 255, 0.5)
+Stroke: Solid
+#222222
+Align: Inside
+Width: 1px
+```
 
 <h3>Tipografia</h3>
-Il font utilizzato è [Poppins] (https://fonts.google.com/specimen/Poppins).
+Il font utilizzato è [Poppins](https://fonts.google.com/specimen/Poppins).
 Poppins è un font moderno e pulito caratterizzato da forme arrotondate che lo rendono accessibile e amichevole. La sua ampia gamma di stili e pesi consente una maggiore flessibilità nell'adattamento del testo a diverse dimensioni e dispositivi. È progettato con una buona leggibilità, con una distinzione chiara tra le lettere simili, migliorando l'esperienza di lettura per gli utenti. La sua eleganza e precisione conferiscono al font un aspetto professionale e raffinato, adatto a progetti che richiedono un tocco di sofisticatezza. Nel complesso, Poppins unisce accessibilità, professionalità e leggibilità, rendendolo una scelta solida per l'interfaccia del tuo software di modellazione 3D per artigiani digitali.
 
 
