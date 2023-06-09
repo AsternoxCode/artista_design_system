@@ -12,8 +12,6 @@
 - [Fondamenta del design system](#fondamenta-design)
 - [Principi del design system](#principi-design)
 
-
-
 ## Introduzione
 Questo documento è progettato per fornire una panoramica del <i>design system</i> progettato da Asternox per il progetto ARTISTA, un sistema modellatore di *virtual pottery* in modalità VR (*Virtual Reality*) intuitivo ed essenziale; il software è destinato all'utilizzo da parte di utenti sia novizi che esperti che vogliono esplorare il potenziale creativo della ceramica.
 Il documento comprende linee guida, componenti e risorse essenziali per garantire coerenza, efficienza e qualità nel progesso di progettazione e sviluppo.
@@ -29,9 +27,24 @@ Il nostro design system ha lo scopo di raggiungere diversi obiettivi chiave che 
 ## Principi del <i>design system</i>
 
 ### Progettazione per sistemi VR: *campo visivo* e *comfort zone degli occhi*
-Quando si progetta per il software VR, è fondamentale tenere conto del campo visivo (*field of view* o FOV) e della comfort zone degli occhi, al fine di garantire un'esperienza utente ottimale e confortevole. Il campo visivo rappresenta l'area visiva che l'utente può vedere attraverso gli occhiali VR e può variare a seconda del dispositivo utilizzato; per sfruttare al meglio il campo visivo, è consigliato posizionare gli elementi chiave, come testi e icone, all'interno della zona di visione centrale dell'utente, in modo che siano facilmente leggibili e comprensibili. 
+Quando si progetta per il software VR, è fondamentale tenere conto del campo visivo (*field of view* o FOV) e della comfort zone degli occhi, al fine di garantire un'esperienza utente ottimale e confortevole. Il campo visivo rappresenta l'area visiva che l'utente può vedere attraverso gli occhiali VR e può variare a seconda del dispositivo utilizzato; per sfruttare al meglio il campo visivo, è consigliato posizionare gli elementi chiave, come testi e icone, all'interno della zona di visione centrale dell'utente, in modo che siano facilmente leggibili e comprensibili.
+
+<p align="center">
+    <img src="https://github.com/AsternoxCode/artista_design_system/blob/7b60245d184b64c3fcd64a7c6c7c8176cf5920ed/general-design/FOV.png" height=300 alt="Immagine che rappresenta la field of view"> 
+    <p align="center"><i>FOV - Fonte: <a href="https://developer.oculus.com/resources/bp-vision/" target="_blank">Oculus</a></i></p>
+</p>
 
 Inoltre, è importante considerare la comfort zone degli occhi, altresì le *attention areas* in cui gli occhi dell'utente sono più propensi a concentrarsi durante l'esperienza VR. Queste aree di attenzione possono variare a seconda del contesto e dell'interazione desiderata, ma in generale includono il campo visivo frontale e le aree periferiche. Bisogna assicurarsi che le informazioni cruciali e gli elementi interattivi siano posizionati all'interno di queste aree, in modo che gli utenti possano facilmente individuarli senza dover spostare eccessivamente gli occhi o la testa. Questa pratica è importante per migliorare la leggibilità, l'usabilità e ridurrà l'affaticamento degli occhi durante l'interazione VR.
+
+<p align="center">
+    <img src="https://github.com/AsternoxCode/artista_design_system/blob/7b60245d184b64c3fcd64a7c6c7c8176cf5920ed/general-design/AngularGrid.png" height=300 alt="Immagine che rappresenta la griglia angolare del campo visivo."> 
+    <p align="center"><i>Griglia angolare del campo visivo</i></p>
+</p>
+  
+<p align="center">
+    <img src="https://github.com/AsternoxCode/artista_design_system/blob/7b60245d184b64c3fcd64a7c6c7c8176cf5920ed/general-design/Attention%20Areas.png" height=300 alt="Immagine che rappresenta la griglia angolare del campo visivo in relazione alla comfort zone dell'occhio"> 
+    <p align="center"><i>Griglia angolare del campo visivo con rappresentazione della comfort zone dell'occhio (e area di attenzione)</i></p>
+</p>
 
 Bisogna, infine, considerare anche altri aspetti tecnici, come il bilanciamento dei colori, il contrasto, la dimensione del testo e l'uso delle animazioni, al fine di garantire una buona leggibilità, una chiara comunicazione visiva e una navigazione intuitiva nell'ambiente VR.
 
@@ -52,17 +65,42 @@ I seguenti principi di design sono la base di questo *design system*, e guidano 
 
 ## Fondamenta del *design system*
 ### Griglia e Layout
-Il nostro *design system* utilizza un sistema di griglia flessibile per garantire un layout coerente e ben strutturato nelle interfacce utente. In particolare, la nostra griglia è composta da <strong>12 colonne della distanza (<i>gutter</i>) di 16px l'una</strong> (la scelta di 12 colonne consente di avere una flessibilità sufficiente per adattare il layout alle diverse dimensioni dello schermo o esigenze).
+Il nostro *design system* utilizza un sistema di griglia flessibile per garantire un layout coerente e ben strutturato nelle interfacce utente. In particolare, la griglia è composta da <strong>12 colonne della distanza (<i>gutter</i>) di 16px l'una</strong> (la scelta di 12 colonne consente di avere una flessibilità sufficiente per adattare il layout alle diverse dimensioni dello schermo o esigenze).
 
-Di seguito è riportata una sintesi visiva del layout:
+Di seguito è riportata una sintesi visiva della griglia layout. La stessa sintesi visiva è riportata in relazione alla FOV e all'area di attenzione: è evidente dall'immagine come il layout scelto si adatti naturalmente alla comfort zone dell'occhio e come gli elementi principali della schermata siano i primi ad essere recepiti dall'utente.
 
-<img src="https://github.com/AsternoxCode/artista_design_system/blob/9d8764566972b2cb412d58c852ce795f82b59c33/layout/Layout.png" alt="Layout generale di ARTISTA">
+<p align="center">
+    <img src="https://github.com/AsternoxCode/artista_design_system/blob/7b60245d184b64c3fcd64a7c6c7c8176cf5920ed/layout/Layout.png" height=500 alt="Layout del sistema."> 
+    <p align="center"><i>Layout generale del sistema.</i></p>
+</p>
 
-L'interfaccia si divide in due parti fondamentali: la <strong>view principale</strong> e la <strong>sidebar</strong>. Nella 
-<img src="https://github.com/AsternoxCode/artista_design_system/blob/9d8764566972b2cb412d58c852ce795f82b59c33/layout/Layout-Padding.png" alt="Layout generale di ARTISTA, compreso di padding">
-<img src="https://github.com/AsternoxCode/artista_design_system/blob/22712699cefd3604578dc6d972eab206761bf556/layout/Layout-Padding-Schede.png" alt="Layout generale di ARTISTA, padding e schede">
+<p align="center">
+    <img src="https://github.com/AsternoxCode/artista_design_system/blob/7b60245d184b64c3fcd64a7c6c7c8176cf5920ed/general-design/Griglie-AngularGrid.png" height=300 alt="Layout dell'interfaccia in relazione al FOV."> 
+    <p align="center"><i>Layout in relazione al FOV.</i></p>
+</p>
 
-Ed hanno le seguenti caratteristiche:
+<p align="center">
+    <img src="https://github.com/AsternoxCode/artista_design_system/blob/7b60245d184b64c3fcd64a7c6c7c8176cf5920ed/general-design/Griglie-AttentionAreas.png" height=300 alt="Layout dell'interfaccia in relazione alle attention area."> 
+    <p align="center"><i>Layout in relazione alle attention area.</i></p>
+</p>
+
+### *View* principale e *sidebar*
+
+L'interfaccia si divide in due parti fondamentali: la <strong>view principale</strong> e la <strong>sidebar</strong>.
+La *view* principale è caratterizzata dagli elementi di interazione principali, mentre la sidebar fornisce navigazione; solo occasionalmente quest'ultima è l'elemento principale, in particolare quando l'interazione utente con l'interfaccia è di passaggio (quasi immediata e caratterizzata da poche interazioni).
+
+Il layout delle interfacce è predisposto come segue:
+
+<p align="center">
+    <img src="https://github.com/AsternoxCode/artista_design_system/blob/7b60245d184b64c3fcd64a7c6c7c8176cf5920ed/layout/Layout-Padding.png" height=500 alt="Layout della view principale e della sidebar, in particolare il cd. padding."> 
+    <p align="center"><i>Layout della view principale e della sidebar, in particolare il cd. padding.</p>
+</p>
+
+<p align="center">
+    <img src="https://github.com/AsternoxCode/artista_design_system/blob/7b60245d184b64c3fcd64a7c6c7c8176cf5920ed/layout/Layout-Padding-Schede.png" height=500 alt="Layout della view principale e della sidebar, in particolare il cd. padding."> 
+    <p align="center"><i>Layout della view principale e della sidebar, in particolare il cd. padding, con l'aggiunta di più elementi (come le schede).</p>
+</p>
+
 
 #### View principale
   
@@ -121,3 +159,13 @@ Poppins è un font moderno e pulito caratterizzato da forme arrotondate che lo r
 | Pulsante grande  | PG |  500   | 18px |  28px       | 1px    |
 | Pulsante medio   | PM |  500   | 16px |  26px       | 0.5px  |
 | Pulsante piccolo | PP |  500   | 14px |  26px       | 0.5px  |
+
+### Sistema di colori
+*sezione in fase di scrittura*
+
+### Icone
+*sezione in fase di scrittura*
+
+### Componenti
+*sezione in fase di scrittura*
+
