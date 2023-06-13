@@ -11,6 +11,7 @@
 - [Introduzione](#introduzione)
 - [Fondamenta del design system](#fondamenta-design)
 - [Principi del design system](#principi-design)
+- Componenti
 
 ## Introduzione
 Questo documento è progettato per fornire una panoramica del <i>design system</i> progettato da Asternox per il progetto ARTISTA, un sistema modellatore di *virtual pottery* in modalità VR (*Virtual Reality*) intuitivo ed essenziale; il software è destinato all'utilizzo da parte di utenti sia novizi che esperti che vogliono esplorare il potenziale creativo della ceramica.
@@ -166,6 +167,81 @@ Poppins è un font moderno e pulito caratterizzato da forme arrotondate che lo r
 ### Icone
 *sezione in fase di scrittura*
 
-### Componenti
-*sezione in fase di scrittura*
+## Componenti
+Il design system di ARTISTA offre un set di componenti predefiniti. Questi componenti semplificano il processo di progettazione e sviluppo, garantendo coerenza vsiva e funzionale nelle schermate di ARTISTA.
+
+### Bottoni
+I bottoni (o pulsanti) sono elementi essenziali per l'interazione degli utenti con il software. Il design system di ARTISTA offre una varietà di stili e dimensioni di bottoni diversi, che possono essere utilizzati in base alle esigenze del progetto.
+Abbiamo definito diversi stili di bottoni per adattarsi alle diverse azioni e al contesto di utilizzo.
+Vi sono tre grandezze di default:
+
+- GRANDE (G) 
+height: 52px |
+width: 186px |
+border-radius: 10px |
+padding: 12px 24px 12px 24px;
+
+- MEDIO (M)
+height: 42px |
+width: 157px |
+border-radius: 6px |
+padding: 8px 16px 8px 16px;
+
+- PICCOLO (P)
+height: 32px |
+width: 128px |
+border-radius: 6px |
+padding: 3px 14px 3px 14px;
+
+Ogni bottone, quindi ogni grandezza, ha uno stile predefinito:
+
+- Primary: bottoni utilizzati per le azioni principali dell'interfaccia. Questo stile di bottone è caratterizzato da un colore distintivo che richiama l'attenzione dell'utente.
+- Secondary: bottoni utilizzati per le azioni secondarie o opzionali. Questi bottoni hanno un aspetto più sobrio.
+- Tertiary: bottoni utilizzati per fornire un'interazione testuale o come collegamento senza l'aspetto tradizionale di un bottone. Generalmente utilizzato per azioni di minor rilevanza o per fornire informazioni aggiuntive.
+
+Ogni stile predefinito, inoltre, è caratterizzato da:
+- Icona: assenza o presenza dell'icona, che può essere a destra o a sinistra;
+- Stato del bottone, ovvero interazione effettuata o possibile con il bottone, che si dividono in DEFAULT, HOVER, PREMUTO E DISABILITATO.
+
+Ricapitolando, ogni bottone è determinato da:
+- DIMENSIONE: GRANDE | MEDIO | PICCOLO;
+- TIPO: PRIMARY | SECONDARY | TERTIARY;
+- ICONA: NO | DX | SX;
+- STATO: DEFAULT | HOVER | PREMUTO | DISABILITATO.
+
+#### Impostazioni dei bottoni in Unity
+In Unity vi sono delle impostazioni principali associate ad ogni tipologia di bottone, di seguito riassunte:
+
+- **Target Graphic:** impostazione per definire l'immagine o il componente grafico che rappresenta il bottone. Questo componente determina l'aspetto visivo del bottone. Nel caso di questo design system è sufficiente creare un elemento grafico dedicato.
+- **Transition:** impostazione per definire come il bottone reagisce quando viene interagito dall'utente.
+- **Normal Color:** impostazione per definire il colore predefinito del bottone quando non è stato selezionato o interagito.
+- **Highlighted Color:** impostazione per definire il colore che viene visualizzato quando il cursore del mouse è sopra il bottone (ovvero, corrisponde al feedback visivo dell'hovering).
+- **Pressed Color:** impostazione per definire il colore che viene visualizzato quando il bottone viene premuto o selezionato. Buona norma è rendere il colore più scuro o più evidente per indicare che il bottone è stato attivato.
+- **Disabled Color:** impostrazione per definire il colore che viene visualizzato quando il bottone è disabilitato, ovvero quando non può essere selezionato o interagito. Indicare che il bottone non è attualmente disponibile.
+
+In base a queste impostazioni, possiamo definire una palette di colori per ogni stato e per ogni tipo di bottone (*primary*, *secondary* e *tertiary*):
+##### Primary
+- TESTO: FFFFFF, rgb(255, 255, 255, 100);
+- TRANSITION: COLOR TINT
+- NORMAL COLOR: C21D24, rgb(194, 29, 36, 100);
+- HIGHLITED COLOR: A2181E, rgb(162, 24, 30, 100);
+- PRESSED COLOR: E64442, rgb(230, 68, 66, 100);
+- DISABLED COLOR: 595959, rgb(89, 89, 89, 100); E TESTO 818181, rgb(129, 129, 129, 100);
+
+##### Secondary (in progress)
+- TESTO: 
+- TRANSITION: 
+- NORMAL COLOR: 
+- HIGHLITED COLOR: 
+- PRESSED COLOR: 
+- DISABLED COLOR: 595959, rgb(89, 89, 89, 100); E TESTO 818181, rgb(129, 129, 129, 100);
+
+##### Tertiary
+- TESTO: FFFFFF, rgb(255, 255, 255, 100);
+- TRANSITION: COLOR TINT
+- NORMAL COLOR: 595959, rgb(89, 89, 89, 100);
+- HIGHLITED COLOR: 525252, rgb(82, 82, 82, 100);
+- PRESSED COLOR: 686868, rgb(104, 104, 104, 100);
+- DISABLED COLOR: 595959, rgb(89, 89, 89, 100); E TESTO 818181, rgb(129, 129, 129, 100);
+
 
