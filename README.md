@@ -64,6 +64,25 @@ I seguenti principi di design sono la base di questo *design system*, e guidano 
 4. **Flessibilità:** l'obiettivo è offrire una flessibilità adeguata a futuri design e sviluppatori per adattarsi a diverse situazioni e requisiti. I componenti sono progettati per essere personalizzabili e adattabili per soddisfare le esigenze specifiche del prodotto.
 5. **Efficienza:** l'obiettivo è migliorare l'efficienza del lavoro fornendo un set di componenti e risorse riutilizzabili, riducendo il tempo necessario per progettare e sviluppare nuove interfacce, utilizzando i nostri principi di design come guida.
 
+### *Information Architecture*
+L'*information architecture* (abbr. IA) è la pratica dello UX Design volta ad organizzare, strutturare e progettare l'accesso alle informazioni in modo intuitivo ed efficiente. L'obiettivo dell'information architecture è quello di creare una struttura coerente e comprensibile per un sistema informativo.
+L'IA si basa sulla comprensione delle esigenze degli utenti e dei contenuti informativi da presentare. Essendo l'IA correlata all'*interaction design*, all'usabilità e alla UX, essendo il nostro sistema *user-centered*, è importante creare un'architettura ottimizzata.
+
+Creare un'IA efficace richiede un processo di progettazione o un approccio strutturato; creare una IA per un software VR richiede un approccio leggermente diverso rispetto a un'applicazione web o mobile. Nel dettaglio, è necessario considerare:
+
+- **La comprensione piena dell'esperienza utente**, in particolare gli aspetti unici della VR, come la profondità, l'immersione e le interazioni spaziali, gli spostamenti nello spazio virtuale e il relazionamento con oggetti e contenuti;
+- **La definizione di obiettivi e casi d'uso** come esplorazione di ambienti virtuali, l'interazione con oggetti o la visualizzazione di contenuti multimediali;
+- **La progettazione della struttura spaziale**, che non è più bidimensionale. Bisogna considerare, infatti, profondità, altezza e posizione degli oggetti per creare una struttura spaziale intuitiva;
+- **La progettazione di un'interfaccia intuitiva** (non solo della struttura spaziale), che sfrutti le capacità interattive della VR come tracciamento dei movimenti delle mani o dei controller, con feedback visivi e sonori;
+- **La semantica degli oggetti e degli ambienti**, a cui si aggiunge una dimensione in più da sfruttare (non solo altezza e larghezza, ma anche profondità).
+
+Essendo un menù "standard", il menù principale ha uno schema più semplice rispetto all'interfaccia di gioco. Ciò è dovuto anche all'approccio dell'applicazione più "tecnico" rispetto ad un gioco VR vero e proprio.
+
+<p align="center">
+    <img src="https://github.com/AsternoxCode/artista_design_system/blob/f0e20bd58e9c7b07bd45ba359291255a4e5b1892/general-design/Information-Architecture-Main.png" height=500 alt="Information Architecture del menù principale"> 
+    <p align="center"><i>Information Architecture del menù principale</i></p>
+</p>
+
 ## Fondamenta del *design system*
 
 ### Griglia e Layout
@@ -178,6 +197,11 @@ In una interfaccia VR è importante utilizzare i colori in modo strategico per g
 #### Sintesi visiva del sistema di colori
 
 L'immagine di seguito riporta una sintesi visiva del sistema di colori. La tabella, invece, riporta i codici degli stessi.
+
+<p align="center">
+    <img src="https://github.com/AsternoxCode/artista_design_system/blob/f0e20bd58e9c7b07bd45ba359291255a4e5b1892/general-design/COLORI.png" height=1000 alt="Sistema di colori di ARTISTA"> 
+    <p align="center"><i>Sistema di colori di ARTISTA</i></p>
+</p>
 
 |     Colori neutri    |    Primary, Azioni    | Primary, Sfumature | Primary, Azioni sfumature |   Primary, Stati   |         Testo         |
 |----------------------|-----------------------|--------------------|---------------------------|--------------------|-----------------------|
