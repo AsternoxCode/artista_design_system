@@ -9,9 +9,9 @@
 ## Indice
 
 - [Introduzione](#introduzione)
-- [Fondamenta del design system](#fondamenta-design)
 - [Principi del design system](#principi-design)
-- Componenti
+- [Fondamenta del design system](#fondamenta-design)
+- Controlli
 
 ## Introduzione
 Questo documento è progettato per fornire una panoramica del <i>design system</i> progettato da Asternox per il progetto ARTISTA, un sistema modellatore di *virtual pottery* in modalità VR (*Virtual Reality*) intuitivo ed essenziale; il software è destinato all'utilizzo da parte di utenti sia novizi che esperti che vogliono esplorare il potenziale creativo della ceramica.
@@ -65,6 +65,7 @@ I seguenti principi di design sono la base di questo *design system*, e guidano 
 5. **Efficienza:** l'obiettivo è migliorare l'efficienza del lavoro fornendo un set di componenti e risorse riutilizzabili, riducendo il tempo necessario per progettare e sviluppare nuove interfacce, utilizzando i nostri principi di design come guida.
 
 ## Fondamenta del *design system*
+
 ### Griglia e Layout
 Il nostro *design system* utilizza un sistema di griglia flessibile per garantire un layout coerente e ben strutturato nelle interfacce utente. In particolare, la griglia è composta da <strong>12 colonne della distanza (<i>gutter</i>) di 16px l'una</strong> (la scelta di 12 colonne consente di avere una flessibilità sufficiente per adattare il layout alle diverse dimensioni dello schermo o esigenze).
 
@@ -112,7 +113,7 @@ Corner radius: 12px
 Fill: Solid
 rgba(255, 255, 255, 0.55)
 Stroke: Solid
-#FFFFFF
+hex FFFFFF
 Align: Center
 Width: 2px
 Effect: Background blur
@@ -126,7 +127,7 @@ W: 256px
 H: 560px
 Corner radius: 12px
 Fill: Solid
-#222222
+hex 222222
 ```
 #### Schede
   
@@ -137,12 +138,13 @@ Corner radius: 6px
 Fill: Solid
 rgba(255, 255, 255, 0.5)
 Stroke: Solid
-#222222
+hex 222222
 Align: Inside
 Width: 1px
 ```
 
 ### Tipografia
+
 Il font utilizzato è [Poppins](https://fonts.google.com/specimen/Poppins).
 
 Poppins è un font moderno e pulito caratterizzato da forme arrotondate che lo rendono accessibile e amichevole. La sua ampia gamma di stili e pesi consente una maggiore flessibilità nell'adattamento del testo a diverse dimensioni e dispositivi. È progettato con una buona leggibilità, con una distinzione chiara tra le lettere simili, migliorando l'esperienza di lettura per gli utenti. La sua eleganza e precisione conferiscono al font un aspetto professionale e raffinato, adatto a progetti che richiedono un tocco di sofisticatezza. Nel complesso, Poppins unisce accessibilità, professionalità e leggibilità, rendendolo una scelta solida per l'interfaccia del tuo software di modellazione 3D per artigiani digitali.
@@ -162,10 +164,43 @@ Poppins è un font moderno e pulito caratterizzato da forme arrotondate che lo r
 | Pulsante piccolo | PP |  500   | 14px |  26px       | 0.5px  |
 
 ### Sistema di colori
-*sezione in fase di scrittura*
+Il design system di ARTISTA offre un sistema di colori ben definito che consente di mantenere una coerenza visiva in tutto il software, soprattutto coinvolgente e confortevole, essendo destinata ad un ambiente VR. La scelta dei colori è cruciale per guidare l'attenzione dell'utente, comunicare informazioni importanti e creare un'atmosfera coerente all'interno dell'ambiente VR.
+
+#### Utilizzo dei colori in un'interfaccia VR
+
+In una interfaccia VR è importante utilizzare i colori in modo strategico per guidare l'utente e creare un'esperienza visiva armoniosa. Alcune considerazioni effettuate nella creazione del sistema di colori:
+
+- **Contrasto:** è essenziale assicurarsi che vi sia un contrasto sufficiente tra i colori degli elementi interattivi e lo sfondo circostante ;questo migliorerà la leggibilità e facilita l'individuazione degli elementi interattivi nell'ambiente VR.
+- **Feedback visivo:** è consigliato utilizzare i colori per fornire feedback visivi all'utente, come ad esempio una variazione di colore per indicare quando un'azione è stata completata con successo o per evidenziare un elemento selezionato.
+- **Scala cromatica:** utilizzare tonalità e sfumature della stessa famiglia di colori per creare una scala cromatica coerente all'interno dell'interfaccia VR. Questo contribuirà a creare una sensazione di coesione visiva e fluidità all'interno dell'ambiente virtuale.
+- **Considerazioni per la visione stereoscopica:** tenendo conto della natura stereoscopica dell'ambiente VR, evitare l'utilizzo di colori che possono causare distorsioni visive o effetti indesiderati nell'esperienza stereoscopica dell'utente.
+
+#### Sintesi visiva del sistema di colori
+
+L'immagine di seguito riporta una sintesi visiva del sistema di colori. La tabella, invece, riporta i codici degli stessi.
+
+|     Colori neutri    |    Primary, Azioni    | Primary, Sfumature | Primary, Azioni sfumature |   Primary, Stati   |         Testo         |
+|----------------------|-----------------------|--------------------|---------------------------|--------------------|-----------------------|
+| Interfaccia - 222222 | Default - 595959      | 900 - 410A0C       | Principale - C21D24       | Hover - A2181E     | Primary - FFFFFF      |
+| Grigio 2 - 2B2B2B    | Hover - 525252        | 800 - 610E12       | Dark - A2181E             | Default - C21D24   | Secondary - EEEEEE    |
+| Grigio 3 - 363636    | Attivo - 686868       | 700 - 811318       | Light - E64442            | Attivo - E64442    | Disabilitato - 818181 |
+| Grigio 4 - 404040    | Disabilitato - 595959 | 600 - A2181E       | Link - EA6361             | Contrasto - FF6C6C |                       |
+| Grigio 5 - 595959    |                       | 500 - C21D24       |                           |                    |                       |
+| Grigio 6 - 686868    |                       | 400 - CC4349       |                           |                    |                       |
+| Grigio 7 - 909090    |                       | 300 - D6686D       |                           |                    |                       |
+| Grigio 8 - B5B5B5    |                       | 200 - E08E92       |                           |                    |                       |
+| Grigio 9 - D3D3D3    |                       | 100 - EBB4B6       |                           |                    |                       |
+| Grigio 10 - EEEEEE   |                       | 050 - F3D2D3       |                           |                    |                       |
+| Bianco - FFFFFF      |                       |                    |                           |                    |                       |
 
 ### Icone
-*sezione in fase di scrittura*
+Le icone rivestono un ruolo fondamentale nella comunicazione visiva all'interno di un software VR. Il design system di ARTISTA offre una vasta gamma di icone adatte specificamente per l'ambiente VR, consentendo una comunicazione rapida ed efficace delle informazioni agli utenti. La libreria di icone è completa e accessibile, e contiene una varietà di simboli e rappresentazioni visive ottimizzate per garantire la chiarezza e la leggibilità all'interno dell'ambiente virtuale.
+Le icone sono disponibili in stile pieno e arrotondato, adatto alla coerenza visiva di tutta l'interfaccia. I formati dei file sono in PNG e SVG, adatti a Unity (da inserire in una cartella a parte).
+
+Si raccomanda di utilizzare le icone del design system in modo coerente all'interno del tuo progetto per garantire un'esperienza VR fluida e una chiarezza visiva.
+
+#### Personalizzazione
+Nel contesto dell'ambiente VR in Unity, è possibile personalizzare le icone per adattarle ai tuoi specifici contesti o esigenze di progettazione; è possibile regolare la dimensione, il colore o l'animazione delle icone per integrarle perfettamente nell' ambiente VR. Tuttavia, è importante mantenere una coerenza visiva all'interno del sistema e utilizzare le personalizzazioni con attenzione per evitare sovraccarichi visivi o confusione per l'utente. Si consiglia, genericamente, di mantenere le animazioni e le transizioni il più semplici possibile.
 
 ## Componenti
 Il design system di ARTISTA offre un set di componenti predefiniti. Questi componenti semplificano il processo di progettazione e sviluppo, garantendo coerenza vsiva e funzionale nelle schermate di ARTISTA.
@@ -195,19 +230,19 @@ padding: 3px 14px 3px 14px;
 
 Ogni bottone, quindi ogni grandezza, ha uno stile predefinito:
 
-- Primary: bottoni utilizzati per le azioni principali dell'interfaccia. Questo stile di bottone è caratterizzato da un colore distintivo che richiama l'attenzione dell'utente.
-- Secondary: bottoni utilizzati per le azioni secondarie o opzionali. Questi bottoni hanno un aspetto più sobrio.
-- Tertiary: bottoni utilizzati per fornire un'interazione testuale o come collegamento senza l'aspetto tradizionale di un bottone. Generalmente utilizzato per azioni di minor rilevanza o per fornire informazioni aggiuntive.
+- **Primary:** bottoni utilizzati per le azioni principali dell'interfaccia. Questo stile di bottone è caratterizzato da un colore distintivo che richiama l'attenzione dell'utente.
+- **Secondary:** bottoni utilizzati per le azioni secondarie o opzionali. Questi bottoni hanno un aspetto più sobrio.
+- **Tertiary:** bottoni utilizzati per fornire un'interazione testuale o come collegamento senza l'aspetto tradizionale di un bottone. Generalmente utilizzato per azioni di minor rilevanza o per fornire informazioni aggiuntive.
 
 Ogni stile predefinito, inoltre, è caratterizzato da:
-- Icona: assenza o presenza dell'icona, che può essere a destra o a sinistra;
-- Stato del bottone, ovvero interazione effettuata o possibile con il bottone, che si dividono in DEFAULT, HOVER, PREMUTO E DISABILITATO.
+- **Icona:** assenza o presenza dell'icona, che può essere a destra o a sinistra;
+- **Stato del bottone:** ovvero interazione effettuata o possibile con il bottone, che si dividono in DEFAULT, HOVER, PREMUTO E DISABILITATO.
 
 Ricapitolando, ogni bottone è determinato da:
-- DIMENSIONE: GRANDE | MEDIO | PICCOLO;
-- TIPO: PRIMARY | SECONDARY | TERTIARY;
-- ICONA: NO | DX | SX;
-- STATO: DEFAULT | HOVER | PREMUTO | DISABILITATO.
+- **DIMENSIONE:** GRANDE | MEDIO | PICCOLO;
+- **TIPO:** PRIMARY | SECONDARY | TERTIARY;
+- **ICONA:** NO | DX | SX;
+- **STATO:** DEFAULT | HOVER | PREMUTO | DISABILITATO.
 
 #### Impostazioni dei bottoni in Unity
 In Unity vi sono delle impostazioni principali associate ad ogni tipologia di bottone, di seguito riassunte:
@@ -220,20 +255,13 @@ In Unity vi sono delle impostazioni principali associate ad ogni tipologia di bo
 - **Disabled Color:** impostrazione per definire il colore che viene visualizzato quando il bottone è disabilitato, ovvero quando non può essere selezionato o interagito. Indicare che il bottone non è attualmente disponibile.
 
 In base a queste impostazioni, possiamo definire una palette di colori per ogni stato e per ogni tipo di bottone (*primary*, *secondary* e *tertiary*):
+
 ##### Primary
 - TESTO: FFFFFF, rgb(255, 255, 255, 100);
 - TRANSITION: COLOR TINT
 - NORMAL COLOR: C21D24, rgb(194, 29, 36, 100);
 - HIGHLITED COLOR: A2181E, rgb(162, 24, 30, 100);
 - PRESSED COLOR: E64442, rgb(230, 68, 66, 100);
-- DISABLED COLOR: 595959, rgb(89, 89, 89, 100); E TESTO 818181, rgb(129, 129, 129, 100);
-
-##### Secondary (in progress)
-- TESTO: 
-- TRANSITION: 
-- NORMAL COLOR: 
-- HIGHLITED COLOR: 
-- PRESSED COLOR: 
 - DISABLED COLOR: 595959, rgb(89, 89, 89, 100); E TESTO 818181, rgb(129, 129, 129, 100);
 
 ##### Tertiary
@@ -243,5 +271,27 @@ In base a queste impostazioni, possiamo definire una palette di colori per ogni 
 - HIGHLITED COLOR: 525252, rgb(82, 82, 82, 100);
 - PRESSED COLOR: 686868, rgb(104, 104, 104, 100);
 - DISABLED COLOR: 595959, rgb(89, 89, 89, 100); E TESTO 818181, rgb(129, 129, 129, 100);
+
+I bottoni **Secondary** sono leggermente diversi, poiché presentano un contorno (*stroke*) e un'opacità.
+Un metodo di sviluppo di un bottone del genere in Unity è il seguente:
+1. **Creazione del bottone** tramite *UI > Button* nell'interfaccia di Unity;
+2. **Creazione del contorno** creando un'immagine di sfondo per il bottone e impostando la sua dimensione in modo che sia leggermente più grande del bottone stesso;
+3. **Gestione dell'opacità** regolando il valore dell'alpha del colore del bottone stesso o dell'immagine di sfondo sia tramite codice che attraverso l'editor di Unity.
+
+#### Secondary
+- TESTO: FFFFFF, rgb(255, 255, 255, 100);
+- TRANSITION: COLOR TINT
+- STROKE: C21D24, rgb(194, 29, 36, 1);
+- NORMAL COLOR: C21D24 con 0% di alpha, rgb(194, 29, 36, 0);
+- HIGHLITED COLOR: C21D24 con 20% di alpha, rgb(194, 29, 36, 0.2);
+- PRESSED COLOR: C21D24 con 50% di alpha, rgb(194, 29, 36, 0.5);
+- DISABLED COLOR: 595959, rgb(89, 89, 89, 100); E TESTO 818181, rgb(129, 129, 129, 100);
+
+### Bottoni della sidebar
+La *sidebar* presenta bottoni leggermente diversi, in particolare per la forma.
+*in fase di scrittura*
+
+## Controlli VR
+*sezione in fase di scrittura*
 
 
